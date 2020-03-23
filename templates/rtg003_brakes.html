@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="Page description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link href="./static/assets/apple-icon-180x180.png" rel="apple-touch-icon">
+  <link href="./static/assets/favicon1.ico" rel="icon">
+
+  <style>
+    body, html {
+    height: 100%;
+    }
+  </style>
+
+  <title>_TEST_</title>
+
+<link href="./static/main.82cfd66e.css" rel="stylesheet"></head>
+
+<body>
+
+<!-- Add your content of header -->
+<header class="">
+  <div class="navbar navbar-default visible-xs">
+    <button type="button" class="navbar-toggle collapsed">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="./index.html" class="navbar-brand">Smart Monitoring System</a>
+  </div>
+
+  <nav class="sidebar"  style="background-color: #f3f3f3">
+    <div class="navbar-collapse" id="navbar-collapse">
+      <div class="site-header hidden-xs">
+          <a class="site-brand" href="./overview.html" title="">
+            <img class="img-responsive site-logo" alt="" src="./static/assets/images/logo.svg" width="100px">
+            Smart Monitoring System
+          </a>
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+<!--        tempor.</p>-->
+      </div>
+      <ul class="nav">
+        <li><a href="./overview.html" title="">Overview</a></li>
+          <div class="dropdown">
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="./rtg001_brakes.html"><font color="grey">RTG 001</font></a><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="./rtg002_brakes.html"><font color="grey">RTG 002</font></a><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="./rtg003_brakes.html"><font color="black"><b>RTG 003</b></font></a><br/>
+          </div>
+<!--        <li><a href="./datasheet.html" title="">USB 5 II Datasheet</a></li>-->
+<!--        <li><a href="./spares.html" title="">USB 5 II Spares</a></li>-->
+      </ul>
+
+      <nav class="nav-footer">
+        <p class="nav-footer-social-buttons">
+<!--          <a class="fa-icon" href="https://www.instagram.com/" title="">-->
+<!--            <i class="fa fa-instagram"></i>-->
+<!--          </a>-->
+<!--          <a class="fa-icon" href="https://dribbble.com/" title="">-->
+<!--            <i class="fa fa-dribbble"></i>-->
+<!--          </a>-->
+<!--          <a class="fa-icon" href="https://twitter.com/" title="">-->
+<!--            <i class="fa fa-twitter"></i>-->
+<!--          </a>-->
+        </p>
+        <p>© Untitled | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+      </nav>  
+    </div>
+  </nav>
+</header>
+<main class="" id="main-collapse">
+
+<!-- Add your site or app content here -->
+ <h1><center>RTG 003</center></h1>
+
+<div class="hero-full-wrapper">
+
+  <!-- First picture -->
+  <div class="grid">
+  <div class="gutter-sizer"></div>
+    <div class="grid-sizer"></div>
+    
+    <div class="grid-item">
+      <h3><center>Wear</center></h3>
+      <img class="img-responsive" alt="" src="./static/assets/images/Wear_3.png">
+<!--      <a href="./project.html" class="project-description">-->
+<!--        <div class="project-text-holder">-->
+<!--          <div class="project-text-inner">-->
+<!--            <h3>Vivamus vestibulum</h3>-->
+<!--            <p>Discover more</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+    </div>
+
+    <!-- Second picture -->
+    <div class="grid-item">
+      <h3><center>Brake temperature</center></h3>
+
+      <head>
+        <script>
+        window.onload = function () {
+
+        var dps = [];
+        var chart = new CanvasJS.Chart("chartContainer", {
+          exportEnabled: false,
+          // title :{
+          //   text: "Brake temperature"
+          // },
+          axisY: {
+            includeZero: false
+          },
+          data: [{
+            type: "spline",
+            markerSize: 0,
+            dataPoints: dps 
+          }]
+        });
+
+        var xVal = 0;
+        var yVal = 35;
+        var updateInterval = 3000;
+        var dataLength = 50; // number of dataPoints visible at any point
+
+        var updateChart = function (count) {
+          count = count || 1;
+          // count is number of times loop runs to generate random dataPoints.
+          for (var j = 0; j < count; j++) {	
+            yVal = yVal + Math.round(1+ Math.random() *(-1-1));
+            dps.push({
+              x: xVal,
+              y: yVal
+            });
+            xVal = xVal + 10;
+          }
+          if (dps.length > dataLength) {
+            dps.shift();
+          }
+          chart.render();
+        };
+
+        updateChart(dataLength); 
+        setInterval(function(){ updateChart() }, updateInterval); 
+
+        }
+        </script>
+      </head>
+      <body>
+        <div id="chartContainer" style="height: 400px; max-width: 720px; margin: 0px auto;"></div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> 
+      </body>
+      
+      <!-- <img class="img-responsive" alt="" src="./static/assets/images/img-05.jpg"> -->
+      <a href="./rtg003_brakes.html" class="project-description">
+        <div class="project-text-holder">
+          <div class="project-text-inner">
+            <h3>Take a closer look</h3>
+            <p>Max allowed: 105 °C</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Third picture -->
+    <div class="grid-item">
+      <h3><center>Brake open</center></h3>
+      <img class="img-responsive" alt="" src="./static/assets/images/Brake closed.png">
+<!--      <a href="./templates/project.html" class="project-description">-->
+<!--        <div class="project-text-holder">-->
+<!--          <div class="project-text-inner">-->
+<!--            <h3>Vivamus vestibulum</h3>-->
+<!--            <p>Discover more</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+    </div>
+
+    <!-- Fourth picture -->
+    <div class="grid-item">
+      <h3><center>Torque setting</center></h3>
+      <img class="img-responsive" alt="" src="./static/assets/images/Torque setting_3.png">
+<!--      <a href="./templates/project.html" class="project-description">-->
+<!--        <div class="project-text-holder">-->
+<!--          <div class="project-text-inner">-->
+<!--            <h3>Vivamus vestibulum</h3>-->
+<!--            <p>Discover more</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+    </div>
+    
+    <!-- Fifth picture -->
+    <div class="grid-item">
+      <h3><center>Reserve stroke</center></h3>
+      <img class="img-responsive" alt="" src="./static/assets/images/Reserve stroke_3.png">
+<!--      <a href="./templates/project.html" class="project-description">-->
+<!--        <div class="project-text-holder">-->
+<!--          <div class="project-text-inner">-->
+<!--            <h3>Vivamus vestibulum</h3>-->
+<!--            <p>Discover more</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+    </div>
+
+    <!-- <div class="grid-item">
+      <img class="img-responsive" alt="" src="./static/assets/images/img-11.jpg">
+      <a href="./templates/project.html" class="project-description">
+        <div class="project-text-holder">
+          <div class="project-text-inner">
+            <h3>Vivamus vestibulum</h3>
+            <p>Discover more</p>
+          </div>
+        </div>
+      </a>
+    </div> -->
+
+    <!-- <div class="grid-item">
+      <img class="img-responsive" alt="" src="./static/assets/images/img-10.jpg">
+      <a href="./templates/project.html" class="project-description">
+        <div class="project-text-holder">
+          <div class="project-text-inner">
+            <h3>Vivamus vestibulum</h3>
+            <p>Discover more</p>
+          </div>
+        </div>
+      </a>
+    </div> -->
+
+    <!-- <div class="grid-item">
+      <img class="img-responsive" alt="" src="./static/assets/images/img-03.jpg">
+      <a href="./templates/project.html" class="project-description">
+        <div class="project-text-holder">
+          <div class="project-text-inner">
+            <h3>Vivamus vestibulum</h3>
+            <p>Discover more</p>
+          </div>
+        </div>
+      </a>
+    </div> -->
+    
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     masonryBuild();
+  });
+</script>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function (event) {
+  navbarToggleSidebar();
+  navActivePage();
+});
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+--><script type="text/javascript" src="./static/main.85741bff.js"></script></body>
+
+</html>
